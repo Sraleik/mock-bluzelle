@@ -25,7 +25,8 @@ pnpm add @sraleik/mock-bluzelle
 This will create a bluzelle like bdd using node-storage to persist data
 
 ```javascript
-const { mockBluzelle } = require('@sraleik/mock-bluzelle');
+const { createMockBluzelle } = require('@sraleik/mock-bluzelle');
+const mockBluzelle = await createMockBluzelle() 
 
 await mockBluzelle.create('foo', 'bar')
 simpleData = await mockBluzelle.read('foo')
@@ -40,6 +41,7 @@ This will create a bluzelle like bdd using your browser localStorage to persist 
 ```javascript
 const { bluzellifier } = require('@sraleik/mock-bluzelle');
 const bluzelleLikeBdd = bluzellifier(window.localStorage)
+const mockBluzelle = bluzelleLikeBdd({public: 'fake', private: 'morefake'})
 
 await mockBluzelle.create('foo', 'bar')
 simpleData = await mockBluzelle.read('foo')

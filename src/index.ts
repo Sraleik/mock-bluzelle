@@ -1,7 +1,7 @@
-import getBluzelleMock from './create-mock-bluzelle'
+import mockBluzelle from './create-mock-bluzelle'
 import bluzellifier from './bluzellifier'
 
 export default {
-    getBluzelleMock,
+    mockBluzelle,
     bluzellifier
 } 

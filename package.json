@@ -1,9 +1,10 @@
 {
   "name": "@sraleik/mock-bluzelle",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "author": "Sraleik",
+  "keywords": ["crypto", "database", "mock"],
   "license": "MIT",
   "files": [
     "lib/**/*"

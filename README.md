@@ -1,29 +1,33 @@
-# Meta-Storage
+# Mock Bluzelle 
 
 ## Description
 
-Simple overlay on a key value database (like bluzelle)
+Simple mock of bluzelle 
 
-- Strigify data before save
-- JSON.parse data on read
-- add a set function that create or update key when needed
+create the bluzelle interface for a key value storage (like nodeStorage)
 
 ## Installation
 
 ```bash
-npm install @sraleik/meta-storage
+npm install @sraleik/mock-bluzelle
 ```
 
 ```bash
-yarn add @sraleik/meta-storage
+yarn add @sraleik/mock-bluzelle
 ```
 
 ```bash
-pnpm add @sraleik/meta-storage
+pnpm add @sraleik/mock-bluzelle
 ```
 
-## Usage 
+## Simple Usage 
 
-TODO
+```javascript
+const createBluzelleBdd = require('./create-mock-bluzelle');
+const mockBluzelle = await createBluzelleBdd();
 
+await mockBluzelle.create('foo', 'bar')
+simpleData = await mockBluzelle.read('foo')
 
+console.log('simpleData',simpleData)
+```
